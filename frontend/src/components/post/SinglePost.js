@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { formatTimestamp } from '../../utils/Utils'
 import { Link } from 'react-router-dom'
-import * as actions from '../../actions/comment'
+import * as actions from '../../actions/commentPost'
 
 class SinglePost extends Component {
   componentDidMount() {

@@ -3,7 +3,7 @@ import '../App.css';
 import PropTypes from 'prop-types';
 import { Link, Route, withRouter, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { sortPost } from '../actions/post'
+import { sortPost } from '../actions/commentPost'
 import { fetchCategories } from '../actions/category'
 import NewPost from './post/NewPost'
 import EditComment from './comment/EditComment'

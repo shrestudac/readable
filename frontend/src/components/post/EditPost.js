@@ -2,8 +2,8 @@ import _ from 'lodash'
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { fetchAllPosts, updatePost } from '../../actions/post'
-import { fetchCommentForPost } from '../../actions/comment'
+import { fetchAllPosts, updatePost } from '../../actions/commentPost'
+import { fetchCommentForPost } from '../../actions/commentPost'
 
 class EditPost extends Component {
   componentDidMount() {

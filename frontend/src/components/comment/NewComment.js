@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { createComment } from '../../actions/comment'
+import { createComment } from '../../actions/commentPost'
 import { guid } from '../../utils/Utils'
 
 class NewComment extends Component {

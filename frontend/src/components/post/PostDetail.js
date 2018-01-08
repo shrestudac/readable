@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { formatTimestamp } from '../../utils/Utils'
 import { Link } from 'react-router-dom'
-import { fetchCommentForPost } from '../../actions/comment'
-import { fetchAllPosts, votePost, deletePost } from '../../actions/post'
+import { fetchCommentForPost } from '../../actions/commentPost'
+import { fetchAllPosts, votePost, deletePost } from '../../actions/commentPost'
 import PostComment from '../comment/PostComment'
 
 class PostDetail extends Component {
@@ -39,12 +39,12 @@ class PostDetail extends Component {
                 <button onClick={() => {
                   votePost(post.id, "upVote")
                   fetchAllPosts()
-                }}>Upvote
+                }}>Upvote Post
                 </button>
                 <button onClick={() => {
                   votePost(post.id, "downVote")
                   fetchAllPosts()
-                }}>Downvote
+                }}>Downvote Post
                 </button>
               </div>
               <div className="post-likes-comments">
@@ -61,12 +61,12 @@ class PostDetail extends Component {
 
         <div className="button-action">
               <Link to={`/${post.category}/${post.id}/edit`}>
-                <button>Edit</button>
+                <button>Edit Post</button>
               </Link>
               <Link to={`/${post.category}/${post.id}/comment`}>
                 <button>Add Comment</button>
               </Link>
-              <button onClick={(e) => this.onPostDelete(e)}>Delete</button>
+              <button onClick={(e) => this.onPostDelete(e)}>Delete Post</button>
             </div>
 
         {post && comments && <PostComment category={post.category} comments={comments} history={this.props.history}/>}

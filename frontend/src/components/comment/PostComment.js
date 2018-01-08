@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { formatTimestamp } from '../../utils/Utils'
 import { Link } from 'react-router-dom'
-import * as commentActions from '../../actions/comment'
+import * as commentActions from '../../actions/commentPost'
 
 class PostComment extends Component {
 
@@ -27,20 +27,20 @@ class PostComment extends Component {
               <div className="post-likes">
                 <button onClick={() => {
                   this.props.voteComment(comment.id, comment.parentId, "upVote")
-                }}>Upvote
+                }}>Upvote Comment
                 </button>
                 <button onClick={() => {
                   this.props.voteComment(comment.id, comment.parentId, "downVote")
-                }}>Downvote 
+                }}>Downvote Comment
                 </button>
                 {comment.voteScore} votes
                 </div>
             </div>
             <div className="button-action">
               <Link to={`/${this.props.category}/${comment.parentId}/${comment.id}/edit`}>
-                <button>Edit</button>
+                <button>Edit Comment</button>
               </Link>
-              <button onClick={() => this.onCommentDelete(comment)}>Delete</button>
+              <button onClick={() => this.onCommentDelete(comment)}>Delete Comment</button>
             </div>
           </div>
         ))}

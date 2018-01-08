@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SinglePost from './post/SinglePost'
 import { connect } from 'react-redux'
-import * as actions from '../actions/post'
+import * as actions from '../actions/commentPost'
 
 class ListPosts extends Component {
   static propTypes = {
