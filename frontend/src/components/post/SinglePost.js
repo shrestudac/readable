@@ -8,6 +8,13 @@ class SinglePost extends Component {
   componentDidMount() {
     this.props.fetchCommentForPost(this.props.post.id)
   }
+ 
+  onPostDelete = () => {
+    const id = this.props.match.params.postId
+    this.props.deletePost(id, () => {
+      this.props.history.push('/')
+    })
+  }
 
   render() {
     const { post, comments, votePost, fetchAllPosts } = this.props
