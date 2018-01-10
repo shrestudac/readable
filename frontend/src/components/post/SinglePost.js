@@ -47,6 +47,12 @@ class SinglePost extends Component {
             </div>
           </div>
         )}
+        <div className="button-action">
+          <Link to={`/${post.category}/${post.id}/edit`}>
+            <button>Edit Post</button>
+          </Link>
+          <button onClick={(e) => this.onPostDelete(e)}>Delete Post</button>
+        </div>
       </div>
     )
   }

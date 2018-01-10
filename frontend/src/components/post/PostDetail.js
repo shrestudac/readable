@@ -60,14 +60,14 @@ class PostDetail extends Component {
         )}
 
         <div className="button-action">
-              <Link to={`/${post.category}/${post.id}/edit`}>
-                <button>Edit Post</button>
-              </Link>
-              <Link to={`/${post.category}/${post.id}/comment`}>
-                <button>Add Comment</button>
-              </Link>
-              <button onClick={(e) => this.onPostDelete(e)}>Delete Post</button>
-            </div>
+          <Link to={`/${post.category}/${post.id}/edit`}>
+            <button>Edit Post</button>
+          </Link>
+          <Link to={`/${post.category}/${post.id}/comment`}>
+            <button>Add Comment</button>
+          </Link>
+          <button onClick={(e) => this.onPostDelete(e)}>Delete Post</button>
+        </div>
 
         {post && comments && <PostComment category={post.category} comments={comments} history={this.props.history}/>}
       </div>
